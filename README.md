@@ -89,11 +89,11 @@ export default {
             ],
             showFields: [
                 {
-                    name: '服务名称：',
+                    name: 'service name：',
                     key: 'name',
                 },
                 {
-                    name: '服务编号：',
+                    name: 'service id：',
                     key: 'serviceId',
                 },
             ],
@@ -106,6 +106,12 @@ export default {
 }
 </script>
 ```
+### 4. API
+
+* props
+	* list: Array, tree datasource
+	* showFields: Array, data display column name
+
 ### 4. Q&A
 #### 1.Why the LeaderLine cannot roll with the page?
 A: Because the svg element is mounted on the html body. So, when you scroll the page by dom in body, svg element still fixed.You can just cancel the scroll but let the body scroll to control.
