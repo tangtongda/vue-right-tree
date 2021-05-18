@@ -26,7 +26,14 @@
               <p
                 v-for="(showItem,index3) in showfields"
                 :key="'showItem'+index3"
-              ><strong>{{showItem.name}}</strong><span :style="{'color':showItem.color}">{{dataItem[showItem.key]}}</span></p>
+              ><strong>{{showItem.name}}</strong>
+                <span
+                  class="data-font"
+                  :style="{'color':showItem.color || showItem.colorEvent(dataItem[showItem.key])}"
+                >
+                  {{dataItem[showItem.key]}}
+                </span>
+              </p>
             </div>
             <div style="width:30px"></div>
             <div
@@ -230,7 +237,6 @@ export default {
             height: 100%;
             display: flex;
             align-items: center;
-            width: 350px;
             text-align: center;
             justify-content: center;
             position: relative;
@@ -260,5 +266,9 @@ export default {
         justify-content: center;
       }
     }
+  }
+  .data-font {
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
   }
 </style>
