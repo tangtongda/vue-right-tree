@@ -4,7 +4,7 @@
 ### Demo
 ![](https://github.com/tangtongda/vue-right-tree/blob/master/static/demo.png?raw=true)
 
-###1. Install unique depency : LeaderLine
+### 1. Install unique depency : LeaderLine
 **npm:**
 [https://www.npmjs.com/package/leader-line-vue](https://www.npmjs.com/package/leader-line-vue)
 **doc:**
@@ -13,13 +13,13 @@
 ```shell
 npm i leader-line-vue
 ```
-###2. Copy the "RightTree.vue" to your vue projects
+### 2. Copy the "RightTree.vue" to your vue projects
 
 > For more custom commercial works,i recommend you to use this way to use the tree components.
 
-###3. Import the components in anywhere
+### 3. Import the components in anywhere
 
-```javascript
+```html
 <template>
   <div>
     <right-tree
@@ -106,6 +106,6 @@ export default {
 }
 </script>
 ```
-###4. Q&A
+### 4. Q&A
 #### 1.Why the LeaderLine cannot roll with the page?
 A: Because the svg element is mounted on the html body. So, when you scroll the page by dom in body, svg element still fixed.You can just cancel the scroll but let the body scroll to control.
